@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMINA — a curated interactive photography gallery.">
+    <title>LUMINA | Visual Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="#home">LUMINA Gallery<span>.</span></a>
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        
+
+        <button id="themeToggle" class="theme-toggle">
+            🌙 Dark Mode
+        </button>
+
+    </nav>
+    <a class="contact-link" href="#about">THE PROJECT ↗</a>
+</header>
+
+<main>
+    <section class="hero section-container" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">✳ &nbsp; A CURATED VISUAL JOURNAL</p>
+            <h1>Every picture<br>tells a <em>story.</em></h1>
+            <p class="description">
+                Explore a thoughtfully curated collection of landscapes,
+                architecture and unforgettable places. Every frame holds
+                a moment worth remembering.
+            </p>
+            <a class="primary-button" href="#gallery">Explore the gallery <span>↘</span></a>
+            <div class="statistics">
+                <div><strong>08</strong><span>Photographs</span></div>
+                <div><strong>03</strong><span>Collections</span></div>
+                <div><strong>∞</strong><span>Perspectives</span></div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <img
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85"
+                alt="Peaceful mountain lake surrounded by mountains"
+            >
+            <div class="image-caption">
+                <span class="caption-dot"></span>
+                <div><small>FEATURED PHOTOGRAPH</small><strong>Beyond the Horizon</strong></div>
+                <span class="caption-index">01 / 08</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <div class="section-container">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION &nbsp; / &nbsp; 001</p>
+                    <h2>Collected <em>moments.</em></h2>
+                </div>
+                <p class="section-description">
+                    A selection of scenes, structures and destinations
+                    captured through a different lens.
+                </p>
+            </div>
+
+            <div class="gallery-toolbar">
+                <div class="filters" aria-label="Filter photographs">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All work</button>
+                    <button class="filter-btn" data-filter="nature" aria-pressed="false">Nature</button>
+                    <button class="filter-btn" data-filter="architecture" aria-pressed="false">Architecture</button>
+                    <button class="filter-btn" data-filter="travel" aria-pressed="false">Travel</button>
+                </div>
+                <p id="count" aria-live="polite">Showing 08 photographs</p>
+            </div>
+
+            <div class="gallery-grid">
+                <button class="gallery-card tall" data-category="nature" data-title="Alpine Silence" data-location="Mountains · Nature">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Majestic alpine mountain peaks" loading="lazy">
+                    <span class="card-overlay"><small>NATURE / 001</small><strong>Alpine Silence <b>↗</b></strong><span>Where the world stands still</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="architecture" data-title="Modern Lines" data-location="Architecture · Design">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85" alt="Contemporary architectural structure" loading="lazy">
+                    <span class="card-overlay"><small>ARCHITECTURE / 002</small><strong>Modern Lines <b>↗</b></strong><span>Geometry in its purest form</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="travel" data-title="Ocean Blues" data-location="Coastline · Travel">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Blue ocean waves meeting the shore" loading="lazy">
+                    <span class="card-overlay"><small>TRAVEL / 003</small><strong>Ocean Blues <b>↗</b></strong><span>Stories carried by the sea</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="nature" data-title="Into the Forest" data-location="Wilderness · Nature">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85" alt="Sunlight filtering through a green forest" loading="lazy">
+                    <span class="card-overlay"><small>NATURE / 004</small><strong>Into the Forest <b>↗</b></strong><span>A quieter kind of beauty</span></span>
+                </button>
+
+                <button class="gallery-card wide" data-category="architecture" data-title="Quiet Geometry" data-location="Modern buildings · Architecture">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=85" alt="Minimal modern white architecture" loading="lazy">
+                    <span class="card-overlay"><small>ARCHITECTURE / 005</small><strong>Quiet Geometry <b>↗</b></strong><span>Form, balance and simplicity</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="travel" data-title="The Blue Escape" data-location="Mountain lake · Travel">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=85" alt="Turquoise lake between green mountains" loading="lazy">
+                    <span class="card-overlay"><small>TRAVEL / 006</small><strong>The Blue Escape <b>↗</b></strong><span>Somewhere beyond ordinary</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="nature" data-title="Golden Horizons" data-location="Countryside · Nature">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Open landscape beneath a dramatic sky" loading="lazy">
+                    <span class="card-overlay"><small>NATURE / 007</small><strong>Golden Horizons <b>↗</b></strong><span>Light changing everything</span></span>
+                </button>
+
+                <button class="gallery-card" data-category="travel" data-title="The Scenic Route" data-location="Mountain valley · Travel">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=85" alt="Beautiful scenic mountain landscape" loading="lazy">
+                    <span class="card-overlay"><small>TRAVEL / 008</small><strong>The Scenic Route <b>↗</b></strong><span>Take the longer way home</span></span>
+                </button>
+            </div>
+
+            <div class="gallery-footer">
+                <span>END OF COLLECTION</span><span class="footer-line"></span><span>08 / 08</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="section-container about-inner">
+            <p class="eyebrow">THE CREATIVE DIRECTION</p>
+            <div>
+                <h2>Made to inspire.<br><em>Built to explore.</em></h2>
+                <p>
+                    LUMINA is an interactive photography gallery focused on
+                    visual storytelling. Its minimal layout keeps the attention
+                    on the photographs while simple interactions make exploring
+                    the collection effortless.
+                </p>
+                <p class="credit">Designed and developed by <strong>Hamza Khan</strong>.</p>
+                <p class="technology">HTML5 &nbsp; / &nbsp; CSS3 &nbsp; / &nbsp; JAVASCRIPT</p>
+            </div>
+            <div class="about-stamp">L<br><span>✳</span></div>
+        </div>
+    </section>
+</main>
+
+<footer class="section-container footer">
+    <a class="logo" href="#home">LUMINA<span>.</span></a>
+    <p>Photography is the art of noticing.</p>
+    <a href="#home">BACK TO TOP ↑</a>
+    <div class="copyright">© 2026 LUMINA GALLERY <span>DEVELOPED BY HAMZA KHAN</span></div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer" aria-hidden="true">
+    <button class="close-button" id="close" aria-label="Close viewer">×</button>
+    <button class="arrow-button" id="prev" aria-label="Previous photograph">←</button>
+    <figure>
+        <img id="large-image" src="" alt="">
+        <figcaption>
+            <div><small id="large-category"></small><h2 id="large-title"></h2><p id="large-location"></p></div>
+            <span id="image-counter"></span>
+        </figcaption>
+    </figure>
+
+    <button class="arrow-button" id="next" aria-label="Next photograph">→</button>
+    <p class="lightbox-help">← PREVIOUS &nbsp; · &nbsp; ESC CLOSE &nbsp; · &nbsp; NEXT →</p>
+</div>
+
+</body>
+</html>
